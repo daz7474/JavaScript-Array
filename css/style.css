@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  color: #333;
+  overflow-x: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  background: #1c92d2;
+  background: linear-gradient(to top, #f2fcfe, #95BDFF);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+
+p {
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+
+button {
+  outline: 0;
+  border: none;
+  background: none;
+}
+
+.container {
+  min-width: 280px;
+  max-width: 575px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1260px;
+  }
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 35px;
+  background: #95BDFF;
+  padding: 5px 15px;
+  margin: 15px 0;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #a5c7fd;
+}
+
+.generate-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+.generate-image .img-container {
+  margin: 15px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.email-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+}
+.email-section .email-container,
+.email-section .select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  margin: 15px;
+}
+.email-section .email-container label,
+.email-section .select-container label {
+  margin-bottom: 10px;
+}
+.email-section .email-container input,
+.email-section .select-container input {
+  border-bottom: 1px solid #95BDFF;
+}
+.email-section .email-container select,
+.email-section .select-container select {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+@media (min-width: 768px) {
+  .email-section .email-container,
+  .email-section .select-container {
+    width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .email-section {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.email-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+}
+.email-img-container .email-address {
+  width: 100%;
+}
+.email-img-container .email-address h2 {
+  font-size: 20px;
+  text-align: center;
+  word-wrap: break-word;
+}
+@media (min-width: 768px) {
+  .email-img-container .email-address h2 {
+    font-size: 32px;
+  }
+}
+.email-img-container .img-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.email-img-container .img-content .email-saved-img {
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease;
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  margin: 15px;
+}
+.email-img-container .img-content .email-saved-img:hover {
+  top: -10px;
+}
+@media (min-width: 768px) {
+  .email-img-container .img-content .email-saved-img {
+    width: 500px;
+  }
+}
+
+.required::placeholder {
+  color: red;
+}
+
+.enter-error,
+.set-error {
+  color: red;
+  margin: 0;
+}
+.enter-error::after,
+.set-error::after {
+  margin: 15px 0;
+}
+
+.flash {
+  background-color: #95BDFF !important;
+  color: #fff !important;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+// Global Config $
+
+// Import if google fonts URL is defined
+
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+// Font styles
+$font-url--google: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900';
+
+$font-primary: 'Poppins', sans-serif;
+
+// Base colors
+
+$white: #fff;
+$black: #333;
+
+// Brand colors
+
+$primary-color: #95BDFF;
+$primary-color-hvr: #a5c7fd;
+
+// Breakpoints
+
+$breakpoints: (
+  'xs': 576px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px,
+);
+
+// Media queries
+
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break );
+  $xs: map-get($breakpoints, 'xs');
+
+  @if $value ==null {
+    @warn "`#{break}` is not a valid breakpoint name"
+  }
+
+  @else if $value <$xs {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}

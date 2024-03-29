@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Random Image Generator</title>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="container section">
+
+      <!-- Random Image -->
+
+      <div class="generate-image">
+        <h1>Random Image Generator</h1>
+
+        <div class="img-container"></div>
+
+        <button class="btn" id="generate-img">
+          Generate New Image
+        </button>
+      </div>
+
+      <div class="main-content">
+
+        <div class="email-section">
+
+          <!-- Enter Email -->
+
+          <div class="email-container">
+            <label for="select">Enter an email address:</label>
+            <div class="enter-error"></div>
+            <input class="input" id="email" type="email" required placeholder="Email*">
+            <button class="btn" id="submit">
+              Set Email
+            </button>
+          </div>
+
+          <!-- Select Email -->
+
+          <div class="select-container">
+            <label for="select">Select an email address:</label>
+            <div class="set-error"></div>
+            <select id="select">
+              <option value="" disabled>Select an email</option>
+            </select>
+            <button class="btn" id="add-to-email">
+              Add Image To Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Display Images -->
+
+        <div class="email-img-container">
+
+          <div class="email-address"></div>
+
+          <div class="img-content"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    </div>
+  </main>
+
+  <script src="js/image.js"></script>
+</body>
+
+</html>

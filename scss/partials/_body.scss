@@ -1,0 +1,71 @@
+// Body
+
+// Global
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Body
+
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  letter-spacing: .4px;
+  color: $black;
+  overflow-x: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  background: #1c92d2;
+  background: linear-gradient(to top, #f2fcfe, $primary-color);
+  min-height: 100vh;
+}
+
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+
+p {
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+// Link
+
+a {
+  text-decoration: none;
+}
+
+// Form elements
+
+input,
+textarea {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+
+// Button
+
+button {
+  outline: 0;
+  border: none;
+  background: none;
+}

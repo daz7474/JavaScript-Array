@@ -1,0 +1,204 @@
+// Main
+
+// Containers
+
+.container {
+  min-width: 280px;
+  max-width: 575px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq('xs') {
+    max-width: 576px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include mq('sm') {
+    max-width: 768px;
+  }
+
+  @include mq('md') {
+    max-width: 992px;
+  }
+
+  @include mq('lg') {
+    max-width: 1260px;
+  }
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+// Button
+
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 35px;
+  background: $primary-color;
+  padding: 5px 15px;
+  margin: 15px 0;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color-hvr;
+  }
+}
+
+// Random Images
+
+.generate-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+
+  & .img-container {
+    margin: 15px;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+// Emails
+
+.email-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+
+  .email-container,
+  .select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    margin: 15px;
+
+    & label {
+      margin-bottom: 10px;
+    }
+
+    & input {
+      border-bottom: 1px solid $primary-color;
+    }
+
+    & select {
+      background-color: $white;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    @include mq('sm') {
+      width: 500px;
+    }
+  }
+
+  @include mq('sm') {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+// Displayed Images
+
+.email-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+
+  & .email-address {
+    width: 100%;
+
+    & h2 {
+      font-size: 20px;
+      text-align: center;
+      word-wrap: break-word;
+
+      @include mq('sm') {
+        font-size: 32px;
+      }
+    }
+  }
+
+  & .img-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & .email-saved-img {
+      position: relative;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+      transition: .5s ease;
+      width: 100%;
+      height: 400px;
+      padding: 20px;
+      margin: 15px;
+
+      &:hover {
+        top: -10px;
+      }
+
+      @include mq('sm') {
+        width: 500px;
+      }
+    }
+  }
+}
+
+.required::placeholder {
+  color: red;
+}
+
+.enter-error,
+.set-error {
+  color: red;
+  margin: 0;
+
+  &::after {
+    margin: 15px 0;
+  }
+}
+
+.flash {
+  background-color: $primary-color !important;
+  color: $white !important;
+}
