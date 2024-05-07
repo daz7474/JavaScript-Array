@@ -108,7 +108,6 @@ submit.addEventListener("click", () => {
 // Add image to selected email and generate a new image
 function addImage() {
   linkImage();
-  getRandomImage();
 }
 
 // On CLick, link the image to the selected email and display images for that email
