@@ -67,6 +67,13 @@ function selectEmail() {
     optionList.value = emailValue;
     optionList.textContent = emailValue;
     select.appendChild(optionList);
+
+    // Set the new option as selected
+    select.value = emailValue;
+
+    // Call displayImages to show images for newly selected email
+    displayImages(emailValue);
+
     select.classList.add("flash");
     setTimeout(() => {
       select.classList.remove("flash");
