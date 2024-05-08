@@ -140,17 +140,30 @@ function linkImage() {
   const selectedOption = select.options[select.selectedIndex];
   const selectedEmail = selectedOption.value;
 
-  // Create a new object
-  const emailImageLink = {
-    email: selectedEmail,
-    imgUrl: img
-  };
+  // Check if the image is already linked
+  const isAlreadyLinked = emailImageArray.some(item => item.email === selectedEmail && item.imgUrl === img);
 
-  // Push the new object into the array
-  emailImageArray.push(emailImageLink);
+  if (!isAlreadyLinked) {
+    // Create a new object
+    const emailImageLink = {
+      email: selectedEmail,
+      imgUrl: img
+    };
 
-  // Call function to display selected email images
-  displayImages(selectedEmail);
+    // Push the new object into the array
+    emailImageArray.push(emailImageLink);
+
+    // Call function to display selected email images
+    displayImages(selectedEmail);
+  } else {
+    // If image is already linked
+    if (setError) {
+      setError.remove();
+    }
+    setError = document.createElement("p");
+    setError.textContent = "This image has already been added to this email address.";
+    setErrorDiv.appendChild(setError);
+  }
 }
 
 // ----------------------------------------------
